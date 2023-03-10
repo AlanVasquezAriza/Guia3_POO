@@ -114,21 +114,21 @@ public class App {
                         }
                     }
                     // Estudiante
-                    if(caso == 1){
-                        Usuario.removerUsuario(Estudiantes, numE);
-                        numE--;
+                    if(caso == 1 & numE >= 1){
+                        int numU = numE;
+                        numE = Usuario.removerUsuario(Estudiantes, numU);
                     }
 
                     // Docente
-                    else if(caso == 2){
-                        Usuario.removerUsuario(Docentes, numD);
-                        numD--;
+                    else if(caso == 2 & numD >= 1){
+                        int numU = numE;
+                        numD = Usuario.removerUsuario(Docentes, numU);
                     }
 
                     // Administrador
-                    else if(caso == 3){
-                        Usuario.removerUsuario(Administrativo, numA);
-                        numA--;
+                    else if(caso == 3 & numA >= 1){
+                        int numU = numE;
+                        numA = Usuario.removerUsuario(Administrativo, numU);
                     }
 
                     else{

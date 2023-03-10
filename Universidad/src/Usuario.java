@@ -78,7 +78,7 @@ class Usuario {
                 + this.ID + "\nDireccion: " + this.direccion);
     }
 
-    public static void removerUsuario(Hashtable<Integer, Object> tabla, int numU) {
+    public static int removerUsuario(Hashtable<Integer, Object> tabla, int numU) {
 
         // Muestra a los usuarios
         System.out.println();
@@ -107,8 +107,11 @@ class Usuario {
         if (tabla.containsKey(user)) {
             Object objeto = tabla.remove(user);
             System.out.println("Valores actualizados correctamente.");
+            numU = numU-1;
+            
         } else {
             System.out.println("La clave " + user + " no existe en la tabla.");
         }
+        return numU;
     }
 }
